@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box
+}
+
+html,body {
+    font-family:'Courier New', Courier, monospace ;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: rgba(218, 221, 230,0.6);
+}
+
+.ticket-container {
+    background-color:rgb(218, 221, 230); 
+    height: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+i{
+    color: goldenrod;
+}
+ 
+
+.fl-left {
+    float: left
+}
+
+ 
+
+.fl-right {
+    float: right
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 450;
+    border-left: 10px solid #fec500;
+    padding-left: 10px;
+    margin-bottom: 30px
+}
+ 
+
+.ticket-row {
+    overflow: hidden
+}
+
+.ticket-card {
+    display: table-row; 
+    background-color:  darkslategray;
+    color: #989898;
+    margin-bottom: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    text-transform: uppercase;
+    border-radius: 4px;
+    position: relative
+}
+
+.ticket-card+.ticket-card {
+    margin-left: 2%
+}
+
+.date {
+    display: table-cell;
+    width: 25%;
+    position: relative;
+    text-align: center;
+    border-right: 2px dashed #dadde6
+}
+
+.date:before,
+.date:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #dadde6;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    z-index: 1;
+    border-radius: 50%
+}
+
+.date:after {
+    top: auto;
+    bottom: -15px
+}
+
+.date time {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+.date time span {
+    display: block
+}
+
+.date time span:first-child {
+    color: #2b2b2b;
+    font-weight: 600;
+    font-size: 250%
+}
+
+.date time span:last-child {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: -10px
+}
+
+.ticket-card-cont {
+    display: table-cell;
+    background-color: darkslategray;
+    width: 75%;
+    font-size: 85%;
+    padding: 10px 10px 20px 40px
+}
+
+.ticket-card-cont h3 {
+    color:darkgoldenrod;
+    font-size: 130%
+}
+ 
+
+.ticket-card-cont>div {
+    display: table-row
+}
+
+.ticket-card-cont .even-date i,
+.ticket-card-cont .even-info i,
+.ticket-card-cont .even-date time,
+.ticket-card-cont .even-info p {
+    display: table-cell
+}
+
+.ticket-card-cont .even-date i,
+.ticket-card-cont .even-info i {
+    padding: 5% 5% 0 0
+}
+
+.ticket-card-cont .even-info p {
+    padding: 30px 50px 0 0
+}
+
+.ticket-card-cont .even-date time span {
+    display: block
+}
+
+.ticket-card-cont a {
+    display: block;
+    text-decoration: none;  
+    text-align: center;
+    line-height: 30px;
+    border-radius: 2px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px
+}
+
+@media screen and (max-width: 860px) {
+    .ticket-card {
+        display: block;
+        float: none;
+        width: 100%;
+        margin-bottom: 10px
+    }
+    .ticket-card+.ticket-card {
+        margin-left: 0
+    }
+    .ticket-card-cont .even-date,
+    .ticket-card-cont .even-info {
+        font-size: 75%
+    }
+}
