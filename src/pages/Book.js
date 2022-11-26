@@ -28,9 +28,7 @@ function Book(props) {
         <>
         
             <section className="date">
-              <time>
-                <button className=" btn btn-sm  btn-outline-warning">Register</button>                
-              </time>
+
             </section>
             <section className=" ticket-card-cont">
               <small><i className="fas fa-user-cog"></i>{author}</small>
@@ -55,7 +53,7 @@ function Book(props) {
                 <span>{description}</span>
               </div>
             </div>
-              <a href="#!"><Button LinkComponent={Link} to={`/books/${_id}`} sx={{ mt: "auto" }} className="fl-left">View</Button></a>
+              <a href="#!"><Button style={{background:'blue', borderRadius:'10px', color:'white'}} variant="primary" size="lg" LinkComponent={Link} to={`/books/${_id}`} sx={{ mt: "auto" }} className="fl-left">Register</Button></a>
               
               <ul>
                 {user ? (

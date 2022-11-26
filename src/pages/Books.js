@@ -3,6 +3,7 @@ import React, {useEffect,useState } from 'react'
 import Book from './Book';
 import '../App.css';
 import Header from '../components/Header';
+import Events from './Events';
 
 
 const URL = "http://localhost:5000/books";
@@ -19,6 +20,7 @@ const Books = () => {
     
     <body style={{ backgroundColor: "rgb(218, 221, 230);" }}>
       <Header/>
+      <Events/>
       <section className="ticket-container" style={{ fontFamily: "'Courier New', Courier, monospace ;" }}>
         <h1>
           Events

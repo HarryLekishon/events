@@ -5,6 +5,7 @@ import { toast } from 'react-toastify'
 import { register, reset } from '../features/auth/authSlice'
 import {FaUser} from 'react-icons/fa'
 import Spinner from './Spinner'
+import Header from './Header'
 
 function Register() {
     
@@ -65,6 +66,7 @@ function Register() {
 
   return (
     <>
+    <Header/>
     <section>
         <h1>
             <FaUser/> Register
